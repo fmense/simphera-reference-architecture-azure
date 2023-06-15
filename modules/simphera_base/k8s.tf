@@ -150,7 +150,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "gpu-execution-nodes" {
   name                  = "gpuexecnodes"
   mode                  = "User"
   orchestrator_version  = var.kubernetesVersion
-  os_disk_size_gb       = 128
+  os_disk_size_gb       = 256
   kubernetes_cluster_id = azurerm_kubernetes_cluster.aks.id
   min_count             = var.gpuNodeCountMin
   max_count             = var.gpuNodeCountMax
