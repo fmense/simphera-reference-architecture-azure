@@ -180,6 +180,10 @@ resource "azurerm_kubernetes_cluster_node_pool" "gpu-execution-nodes" {
       node_count
     ]
   }
+
+  kubelet_config {
+    runtimeRequestTimeout = "20m"
+  }
 }
 
 output "kube_config" {
